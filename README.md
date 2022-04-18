@@ -2,19 +2,19 @@
 
 ## Purpose
 
-AutosRUs' newest protoype the MechCar is suffering from production troubles that are blocking the manufacturing team's progress. We are given some data for the MechaCar protoypes to see if we can help out the manufacturing team.
+AutosRUs' newest prototype the MechCar is suffering from production troubles that are blocking the manufacturing team's progress. We are given some data for the MechaCar prototypes to see if we can help the manufacturing team.
 
 ## Overview
 
 We are given two csv files, MechaCar_mpg.csv and Suspension_Coil.csv and we will perform:
 
-- Multiple linear regression analysis to identify which variables in the dataset predict the mpg of MechaCar Protoypes.
+- Multiple linear regression analysis to identify which variables in the dataset predict the mpg of MechaCar Prototypes.
 
 - Collect summary statistics on the pounds per square inch (PSI) of the suspension coils from the manufacturing lots.
 
 - Run t-tests to determine if the manufacturing lots are statistically different from the mean population
 
-- Design a statistical study to compare vehicle performance of the MechaCar vehicles against vehicles from other manufacturers. For each statistical analysis, you’ll write a summary interpretation of the findings.
+- Design a statistical study to compare vehicle safety rating of the MechaCar vehicles against vehicles from other manufacturers.
 
 ## Line Regression to Predict MPG
 
@@ -28,7 +28,7 @@ Upon performing our multiple linear regression with the MechaCar MPG data, we ca
 
 ![lot]()
 
-When looking at both our total and lot summary dataframes of our suspension data, we can see the mean and medians are all around 1500 PSI. However, this does not mean our design specificiations are all the same. When we compare variance and standard deviation, we can see there is a large descrepency between Lot1 and Lot2 versus Lot3. By ploting the suspension data with a boxplot, we can see there are outliers skewing the data in Lot3.
+When looking at both our total and lot summary dataframes of our suspension data, we can see the mean and medians are all around 1500 PSI. However, this does not mean our design specifications are all the same. When we compare variance and standard deviation, we can see there is a large discrepancy between Lot1 and Lot2 versus Lot3. By plotting the suspension data with a boxplot, we can see there are outliers skewing the data in Lot3.
 
 ![boxplot]()
 
@@ -37,4 +37,8 @@ When looking at both our total and lot summary dataframes of our suspension data
 
 ![ttest]()
 
-If we are to assume the population mean of our PSI is 1500 lbs per square inch, our t-test of each lot show that Lot1 has a p-value of 1, Lot2, has a p-value of 0.61 and Lot3 has a p-value of 0.042. If our H0 is there is no statistical difference between sample mean and population mean and Ha is there is a statistical difference in sample and population mean. Lot1 and Lot2 can not reject H0 however, Lot3 will reject.
+If we are to assume the population mean of our PSI is 1500 lbs per square inch, our t-test of each lot show that Lot1 has a p-value of 1, Lot2, has a p-value of 0.61 and Lot3 has a p-value of 0.042. If our H0 is there is no statistical difference between sample mean and population mean and Ha is there is a statistical difference in sample and population mean. Lot1 and Lot2 cannot reject H0 however, Lot3 will reject.
+
+## Study Design: MechaCar vs Competition
+
+If we want to test whether there is any statistical difference in the distribution of overall safety ratings between our MechaCar vs our competition. We will be collecting data on cars releasing in same year as our Mechacar and the data will be from multiple car safety organizations. Our test would assume our Ho as there is no difference in frequency distribution between the groups and Ha is there is a difference in frequency distribution between the groups. To perform this categorical test, we would use a Chi-Squared test to compile a p-value to reject or accept our Ho.
